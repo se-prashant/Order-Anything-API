@@ -67,7 +67,7 @@ app.post("/catalogue/add", function(req, res) {
 
 
 //deliveryPerson
-app.get("/shipper/login", function(req, res) {
+app.post("/shipper/login", function(req, res) {
   const mobile = req.body.mobile;
   const password = req.body.password;
   Shipper.findOne({
@@ -120,7 +120,7 @@ app.post("/shipper/register", function(req, res) {
 });
 
 /*Customer LOGIN AND RESITRATION*/
-app.get("/customer/login", function(req, res) {
+app.post("/customer/login", function(req, res) {
   const mobile = req.body.mobile;
   const password = req.body.password;
   Customer.findOne({
@@ -248,7 +248,7 @@ app.post("/customer/order", function(req, res) {
 
 
 // Admin LOGIN AND REGISTRATION
-app.get("/admin/login", function(req, res) {
+app.post("/admin/login", function(req, res) {
   const mobile = req.body.mobile;
   const password = req.body.password;
   Admin.findOne({
